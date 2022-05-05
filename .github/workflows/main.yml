@@ -1,0 +1,24 @@
+name: goreadme
+on:
+  push:
+    branches: [main]
+permissions:
+  pull-requests: write
+  contents: write
+jobs:
+  goreadme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: posener/goreadme@v1
+        with:
+          title: github.com/cmattoon/x
+          import-path: github.com/cmattoon/x
+          badge-godoc: 'true'
+          badge-goreadme: 'true'
+          constants: 'true'
+          factories: 'true'
+          functions: 'true'
+          methods: 'true'
+          variabless: 'true'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
