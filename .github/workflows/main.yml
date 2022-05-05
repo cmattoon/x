@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # - run: |
-      #     git config --global --add safe.directory /home/runner/work/x/x
-      #     git config --global --add safe.directory /github/workspace
-      #     git config --global --add safe.directory /github/home
+      - run: |
+          git config --global --add safe.directory /home/runner/work/x/x
+          git config --global --add safe.directory /github/workspace
+          git config --global --add safe.directory /github/home
 
       - uses: posener/goreadme@v1
         with:
