@@ -9,6 +9,7 @@ jobs:
   goreadme:
     runs-on: ubuntu-latest
     steps:
+      - run: git config --global --add safe.directory /github/workspace
       - uses: actions/checkout@v2
       - uses: posener/goreadme@v1
         with:
