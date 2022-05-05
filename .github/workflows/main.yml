@@ -9,9 +9,12 @@ jobs:
   goreadme:
     runs-on: ubuntu-latest
     steps:
-      - run: git config --global --add safe.directory /github/workspace
       - uses: actions/checkout@v2
-      - run: git config --global --add safe.directory /github/workspace
+
+      - run: |
+          git config --global --add safe.directory /home/runner/work
+          git config --global --add safe.directory /github/workspace
+
       - uses: posener/goreadme@v1
         with:
           title: github.com/cmattoon/x
