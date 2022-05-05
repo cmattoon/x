@@ -11,6 +11,7 @@ jobs:
     steps:
       - run: git config --global --add safe.directory /github/workspace
       - uses: actions/checkout@v2
+      - run: git config --global --add safe.directory /github/workspace
       - uses: posener/goreadme@v1
         with:
           title: github.com/cmattoon/x
