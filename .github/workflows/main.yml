@@ -15,7 +15,9 @@ jobs:
           title: github.com/cmattoon/x
           import-path: github.com/cmattoon/x
           badge-godoc: 'true'
-          badge-goreadme: 'true'
+          badge-codecov: 'true'
+          badge-golangci: 'true'
+          badge-goreportcard: 'true'
           constants: 'true'
           factories: 'true'
           functions: 'true'
